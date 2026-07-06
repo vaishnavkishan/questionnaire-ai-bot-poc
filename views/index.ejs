@@ -2,74 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Taxpayer Q&amp;A POC</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <h1>Taxpayer Q&amp;A (Ollama / gemma3:12b)</h1>
+  <div class="page">
+    <header class="page-header">
+      <h1>Taxpayer Q&amp;A</h1>
+      <p class="subtitle">Ollama &middot; gemma3:12b</p>
+    </header>
 
-  <form method="POST" action="/ask">
-    <section>
-      <label for="taxpayerId"><strong>Taxpayer</strong></label><br />
-      <select id="taxpayerId" name="taxpayerId">
-        <% taxpayers.forEach(function (t) { %>
-          <option value="<%= t.id %>" <%= t.id === selectedTaxpayerId ? "selected" : "" %>><%= t.label %></option>
-        <% }); %>
-      </select>
-    </section>
-
-    <section>
-      <strong>Questions</strong>
-      <div class="checkbox-list">
-        <% questionnaire.forEach(function (q) { %>
-          <label class="checkbox-item">
-            <input
-              type="checkbox"
-              name="questionIds"
-              value="<%= q.id %>"
-              <%= checkedQuestionIds.includes(q.id) ? "checked" : "" %>
-            />
-            <%= q.text %>
-            <span class="type-tag"><%= q.answerDataType %></span>
-          </label>
-        <% }); %>
+    <form method="POST" action="/ask" class="card">
+      <div class="field">
+        <label for="taxpayerId">Taxpayer</label>
+        <select id="taxpayerId" name="taxpayerId">
+          <% taxpayers.forEach(function (t) { %>
+            <option value="<%= t.id %>" <%= t.id === selectedTaxpayerId ? "selected" : "" %>><%= t.label %></option>
+          <% }); %>
+        </select>
       </div>
-    </section>
 
-    <section>
-      <label for="freeformQuestion"><strong>Free-form question(s)</strong></label><br />
-      <textarea
-        id="freeformQuestion"
-        name="freeformQuestion"
-        rows="4"
-        placeholder="Type one question per line..."
-      ><%= freeformQuestion %></textarea>
-    </section>
+      <div class="field">
+        <label>Questions</label>
+        <div class="checkbox-list">
+          <% questionnaire.forEach(function (q) { %>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                name="questionIds"
+                value="<%= q.id %>"
+                <%= checkedQuestionIds.includes(q.id) ? "checked" : "" %>
+              />
+              <span class="checkbox-text"><%= q.text %></span>
+              <span class="type-tag"><%= q.answerDataType %></span>
+            </label>
+          <% }); %>
+        </div>
+      </div>
 
-    <button type="submit">Ask AI</button>
-  </form>
+      <div class="field">
+        <label for="freeformQuestion">Free-form question(s)</label>
+        <textarea
+          id="freeformQuestion"
+          name="freeformQuestion"
+          rows="4"
+          placeholder="Type one question per line..."
+        ><%= freeformQuestion %></textarea>
+      </div>
 
-  <% if (result) { %>
-    <section class="result">
-      <% if (result.error) { %>
-        <p class="error"><%= result.error %></p>
-      <% } else { %>
-        <h2>Answers</h2>
-        <table>
-          <thead>
-            <tr><th>Question</th><th>Answer</th></tr>
-          </thead>
-          <tbody>
-            <% result.rows.forEach(function (row) { %>
-              <tr>
-                <td><%= row.questionText %></td>
-                <td><%- row.html %></td>
-              </tr>
-            <% }); %>
-          </tbody>
-        </table>
-      <% } %>
-    </section>
-  <% } %>
+      <div class="actions">
+        <button type="submit">Ask AI</button>
+      </div>
+    </form>
+
+    <% if (result) { %>
+      <section class="card result">
+        <% if (result.error) { %>
+          <p class="error"><%= result.error %></p>
+        <% } else { %>
+          <h2>Answers</h2>
+          <table>
+            <thead>
+              <tr><th>Question</th><th>Answer</th></tr>
+            </thead>
+            <tbody>
+              <% result.rows.forEach(function (row) { %>
+                <tr>
+                  <td><%= row.questionText %></td>
+                  <td><%- row.html %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        <% } %>
+      </section>
+    <% } %>
+  </div>
 </body>
 </html>
