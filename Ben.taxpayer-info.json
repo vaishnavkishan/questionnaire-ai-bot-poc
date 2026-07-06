@@ -1,0 +1,364 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "taxYear": 2025,
+    "formVersion": "1040 (2024)",
+    "country": "US"
+  },
+  "taxpayer": {
+    "firstName": { "value": "JULIE", "confidence": 1 },
+    "lastName": { "value": "WRIGHT", "confidence": 1 },
+    "ssn": { "value": "495-12-3373", "confidence": 1 },
+    "occupation": { "value": "DIRECTOR", "confidence": 1 },
+    "phone": null,
+    "email": null,
+    "filingStatus": { "value": "Single", "confidence": 1 },
+    "digitalAssetsAnswer": { "value": true, "confidence": 1 },
+    "address": {
+      "streetLine": { "value": "125 PEACHTREE ST NE", "confidence": 1 },
+      "aptNo": { "value": "56", "confidence": 1 },
+      "city": { "value": "ATLANTA", "confidence": 1 },
+      "state": { "value": "GA", "confidence": 1 },
+      "zipCode": { "value": "30309", "confidence": 1 }
+    }
+  },
+  "spouse": null,
+  "dependents": [],
+  "thirdPartyDesignee": {
+    "name": { "value": "NANDINI PAPANNA", "confidence": 1 },
+    "phone": { "value": "(844) 842-5861", "confidence": 1 },
+    "pin": { "value": "12345", "confidence": 1 }
+  },
+  "preparer": {
+    "name": { "value": "NANDINI PAPANNA", "confidence": 1 },
+    "ptin": { "value": "P00955896", "confidence": 1 },
+    "firmName": { "value": "SUMMIT TAX ADVISORS", "confidence": 1 },
+    "firmEin": { "value": "87-3913943", "confidence": 1 },
+    "firmPhone": { "value": "(844) 842-5861", "confidence": 1 },
+    "firmAddress": {
+      "streetLine": { "value": "PO BOX 661007", "confidence": 1 },
+      "aptNo": null,
+      "city": { "value": "DALLAS", "confidence": 1 },
+      "state": { "value": "TX", "confidence": 1 },
+      "zipCode": { "value": "75266-1007", "confidence": 1 }
+    }
+  },
+  "refundDirectDeposit": null,
+  "statementReferences": ["SEE STATEMENT 5", "STMT 1"],
+  "return": {
+    "form1040": {
+      "sections": [
+        {
+          "sectionId": "income",
+          "label": "Income",
+          "pageRange": [1],
+          "lines": [
+            { "lineId": "1a", "label": "Total amount from Form(s) W-2, box 1", "amount": { "value": 192500, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1b", "label": "Household employee wages not reported on Form(s) W-2", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1c", "label": "Tip income not reported on line 1a", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1d", "label": "Medicaid waiver payments not reported on Form(s) W-2", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1e", "label": "Taxable dependent care benefits from Form 2441, line 26", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1f", "label": "Employer-provided adoption benefits from Form 8839, line 29", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1g", "label": "Wages from Form 8919, line 6", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1h", "label": "Other earned income", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1i", "label": "Nontaxable combat pay election", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "1z", "label": "Add lines 1a through 1h", "amount": { "value": 192500, "confidence": 1 }, "crossReference": null, "derivedFrom": ["1a", "1b", "1c", "1d", "1e", "1f", "1g", "1h"] },
+            { "lineId": "2a", "label": "Tax-exempt interest", "amount": null, "crossReference": "Schedule B", "derivedFrom": [] },
+            { "lineId": "2b", "label": "Taxable interest", "amount": { "value": 450, "confidence": 1 }, "crossReference": "Schedule B", "derivedFrom": [] },
+            { "lineId": "3a", "label": "Qualified dividends", "amount": { "value": 100, "confidence": 1 }, "crossReference": "Schedule B", "derivedFrom": [] },
+            { "lineId": "3b", "label": "Ordinary dividends", "amount": { "value": 150, "confidence": 1 }, "crossReference": "Schedule B", "derivedFrom": [] },
+            { "lineId": "4a", "label": "IRA distributions", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "4b", "label": "Taxable amount (IRA distributions)", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "5a", "label": "Pensions and annuities", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "5b", "label": "Taxable amount (pensions and annuities)", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "6a", "label": "Social security benefits", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "6b", "label": "Taxable amount (social security benefits)", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "6c", "label": "Lump-sum election method (if checked)", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "7", "label": "Capital gain or (loss)", "amount": { "value": 5800, "confidence": 1 }, "crossReference": "Schedule D", "derivedFrom": [] },
+            { "lineId": "8", "label": "Additional income from Schedule 1, line 10", "amount": null, "crossReference": "Schedule 1", "derivedFrom": [] },
+            { "lineId": "9", "label": "Add lines 1z, 2b, 3b, 4b, 5b, 6b, 7, and 8 — total income", "amount": { "value": 198900, "confidence": 1 }, "crossReference": null, "derivedFrom": ["1z", "2b", "3b", "4b", "5b", "6b", "7", "8"] }
+          ]
+        },
+        {
+          "sectionId": "adjusted-gross-income",
+          "label": "Adjusted Gross Income / Deduction",
+          "pageRange": [1],
+          "lines": [
+            { "lineId": "10", "label": "Adjustments to income from Schedule 1, line 26", "amount": null, "crossReference": "Schedule 1", "derivedFrom": [] },
+            { "lineId": "11", "label": "Adjusted gross income (line 9 minus line 10)", "amount": { "value": 198900, "confidence": 1 }, "crossReference": null, "derivedFrom": ["9", "10"] },
+            { "lineId": "12", "label": "Standard deduction or itemized deductions (from Schedule A)", "amount": { "value": 15750, "confidence": 1 }, "crossReference": "Schedule A", "derivedFrom": [] },
+            { "lineId": "13", "label": "Qualified business income deduction from Form 8995/8995-A", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "14", "label": "Add lines 12 and 13", "amount": { "value": 15750, "confidence": 1 }, "crossReference": null, "derivedFrom": ["12", "13"] },
+            { "lineId": "15", "label": "Taxable income (line 11 minus line 14)", "amount": { "value": 183150, "confidence": 1 }, "crossReference": null, "derivedFrom": ["11", "14"] }
+          ]
+        },
+        {
+          "sectionId": "tax-and-credits",
+          "label": "Tax and Credits",
+          "pageRange": [2],
+          "lines": [
+            { "lineId": "16", "label": "Tax", "amount": { "value": 36000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "17", "label": "Amount from Schedule 2, line 3", "amount": null, "crossReference": "Schedule 2", "derivedFrom": [] },
+            { "lineId": "18", "label": "Add lines 16 and 17", "amount": { "value": 36000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["16", "17"] },
+            { "lineId": "19", "label": "Child tax credit / credit for other dependents", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "20", "label": "Amount from Schedule 3, line 8", "amount": null, "crossReference": "Schedule 3", "derivedFrom": [] },
+            { "lineId": "21", "label": "Subtract line 20 from line 19. If zero or less, enter -0-", "amount": null, "crossReference": null, "derivedFrom": ["19", "20"] },
+            { "lineId": "22", "label": "Subtract line 21 from line 18. If zero or less, enter -0-", "amount": { "value": 36000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["18", "21"] }
+          ]
+        },
+        {
+          "sectionId": "other-taxes",
+          "label": "Other Taxes",
+          "pageRange": [2],
+          "lines": [
+            { "lineId": "23", "label": "Other taxes from Schedule 2, line 21", "amount": null, "crossReference": "Schedule 2", "derivedFrom": [] },
+            { "lineId": "24", "label": "Add lines 22 and 23 — total tax", "amount": { "value": 36000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["22", "23"] }
+          ]
+        },
+        {
+          "sectionId": "payments",
+          "label": "Payments",
+          "pageRange": [2],
+          "lines": [
+            { "lineId": "25a", "label": "Federal income tax withheld from Form(s) W-2", "amount": { "value": 34000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "25b", "label": "Federal income tax withheld from Form(s) 1099", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "25c", "label": "Federal income tax withheld from other forms", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "25d", "label": "Add lines 25a through 25c", "amount": { "value": 34000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["25a", "25b", "25c"] },
+            { "lineId": "26", "label": "2024 estimated tax payments and amount applied from 2023 return", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "27", "label": "Earned income credit (EIC)", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "28", "label": "Additional child tax credit from Schedule 8812", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "29", "label": "American opportunity credit from Form 8863, line 8", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "31", "label": "Amount from Schedule 3, line 15", "amount": null, "crossReference": "Schedule 3", "derivedFrom": [] },
+            { "lineId": "32", "label": "Add lines 27, 28, 29, and 31 — total other payments / refundable credits", "amount": null, "crossReference": null, "derivedFrom": ["27", "28", "29", "31"] },
+            { "lineId": "33", "label": "Add lines 25d, 26, and 32 — total payments", "amount": { "value": 34000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["25d", "26", "32"] }
+          ]
+        },
+        {
+          "sectionId": "refund",
+          "label": "Refund",
+          "pageRange": [2],
+          "lines": [
+            { "lineId": "34", "label": "Overpayment (line 33 minus line 24)", "amount": null, "crossReference": null, "derivedFrom": ["33", "24"] },
+            { "lineId": "35a", "label": "Amount of line 34 you want refunded to you", "amount": null, "crossReference": null, "derivedFrom": [] },
+            { "lineId": "36", "label": "Amount of line 34 you want applied to 2025 estimated tax", "amount": null, "crossReference": null, "derivedFrom": [] }
+          ]
+        },
+        {
+          "sectionId": "amount-you-owe",
+          "label": "Amount You Owe",
+          "pageRange": [2],
+          "lines": [
+            { "lineId": "37", "label": "Amount you owe (line 24 minus line 33)", "amount": { "value": 2000, "confidence": 1 }, "crossReference": null, "derivedFrom": ["24", "33"] },
+            { "lineId": "38", "label": "Estimated tax penalty", "amount": null, "crossReference": null, "derivedFrom": [] }
+          ]
+        }
+      ]
+    },
+    "schedules": {
+      "schedule1": {
+        "present": true,
+        "pageRange": [3, 4],
+        "additionalIncomeLines": [
+          { "lineId": "1", "amount": { "value": 0, "confidence": 1 } },
+          { "lineId": "2a", "amount": null },
+          { "lineId": "3", "amount": null },
+          { "lineId": "4", "amount": null },
+          { "lineId": "5", "amount": null },
+          { "lineId": "6", "amount": null },
+          { "lineId": "7", "amount": null },
+          { "lineId": "8a", "amount": null },
+          { "lineId": "8b", "amount": null },
+          { "lineId": "8c", "amount": null },
+          { "lineId": "8d", "amount": null },
+          { "lineId": "8e", "amount": null },
+          { "lineId": "8f", "amount": null },
+          { "lineId": "8g", "amount": null },
+          { "lineId": "8h", "amount": null },
+          { "lineId": "8i", "amount": null },
+          { "lineId": "8j", "amount": null },
+          { "lineId": "8k", "amount": null },
+          { "lineId": "8l", "amount": null },
+          { "lineId": "8m", "amount": null },
+          { "lineId": "8n", "amount": null },
+          { "lineId": "8o", "amount": null },
+          { "lineId": "8p", "amount": null },
+          { "lineId": "8q", "amount": null },
+          { "lineId": "8r", "amount": null },
+          { "lineId": "8s", "amount": null },
+          { "lineId": "8t", "amount": null },
+          { "lineId": "8u", "amount": null },
+          { "lineId": "8v", "amount": null },
+          { "lineId": "8z", "amount": null },
+          { "lineId": "9", "amount": null },
+          { "lineId": "10", "amount": null }
+        ],
+        "totalAdditionalIncomeLine10": null,
+        "adjustmentLines": [
+          { "lineId": "11", "amount": null },
+          { "lineId": "12", "amount": null },
+          { "lineId": "13", "amount": null },
+          { "lineId": "14", "amount": null },
+          { "lineId": "15", "amount": null },
+          { "lineId": "16", "amount": null },
+          { "lineId": "17", "amount": null },
+          { "lineId": "18", "amount": null },
+          { "lineId": "19a", "amount": null },
+          { "lineId": "20", "amount": null },
+          { "lineId": "21", "amount": null },
+          { "lineId": "22", "amount": null },
+          { "lineId": "23", "amount": null },
+          { "lineId": "24a", "amount": null },
+          { "lineId": "24b", "amount": null },
+          { "lineId": "24c", "amount": null },
+          { "lineId": "24d", "amount": null },
+          { "lineId": "24e", "amount": null },
+          { "lineId": "24f", "amount": null },
+          { "lineId": "24g", "amount": null },
+          { "lineId": "24h", "amount": null },
+          { "lineId": "24i", "amount": null },
+          { "lineId": "24j", "amount": null },
+          { "lineId": "24k", "amount": null },
+          { "lineId": "24z", "amount": null },
+          { "lineId": "25", "amount": null },
+          { "lineId": "26", "amount": null }
+        ],
+        "totalAdjustmentsLine26": null
+      },
+      "schedule2": {
+        "present": true,
+        "pageRange": [5, 6],
+        "additionsToTaxLines": [
+          { "lineId": "1a", "amount": null },
+          { "lineId": "1b", "amount": null },
+          { "lineId": "1c", "amount": null },
+          { "lineId": "1d", "amount": null },
+          { "lineId": "1e", "amount": null },
+          { "lineId": "1f", "amount": null },
+          { "lineId": "1y", "amount": null },
+          { "lineId": "1z", "amount": null },
+          { "lineId": "2", "amount": { "value": 17, "confidence": 1 } },
+          { "lineId": "3", "amount": { "value": 0, "confidence": 1 } }
+        ],
+        "totalAdditionsToTaxLine3": { "value": 0, "confidence": 1 },
+        "otherTaxLines": [
+          { "lineId": "4", "amount": null },
+          { "lineId": "5", "amount": null },
+          { "lineId": "6", "amount": null },
+          { "lineId": "7", "amount": null },
+          { "lineId": "8", "amount": null },
+          { "lineId": "9", "amount": null },
+          { "lineId": "10", "amount": null },
+          { "lineId": "11", "amount": null },
+          { "lineId": "12", "amount": null },
+          { "lineId": "13", "amount": null },
+          { "lineId": "14", "amount": null },
+          { "lineId": "15", "amount": { "value": 150000, "confidence": 1 } },
+          { "lineId": "16", "amount": null },
+          { "lineId": "17a", "amount": null },
+          { "lineId": "17b", "amount": null },
+          { "lineId": "17c", "amount": null },
+          { "lineId": "17d", "amount": null },
+          { "lineId": "17e", "amount": null },
+          { "lineId": "17f", "amount": null },
+          { "lineId": "17g", "amount": null },
+          { "lineId": "17h", "amount": null },
+          { "lineId": "17i", "amount": null },
+          { "lineId": "17j", "amount": null },
+          { "lineId": "17k", "amount": null },
+          { "lineId": "17l", "amount": null },
+          { "lineId": "17m", "amount": null },
+          { "lineId": "17n", "amount": null },
+          { "lineId": "17o", "amount": null },
+          { "lineId": "17p", "amount": null },
+          { "lineId": "17q", "amount": null },
+          { "lineId": "17z", "amount": null },
+          { "lineId": "18", "amount": null },
+          { "lineId": "19", "amount": null },
+          { "lineId": "20", "amount": null },
+          { "lineId": "21", "amount": null }
+        ],
+        "totalOtherTaxesLine21": null
+      },
+      "schedule3": {
+        "present": false,
+        "pageRange": []
+      },
+      "scheduleA": {
+        "present": true,
+        "pageRange": [7],
+        "electedToItemizeWhenLessThanStandardLine18": null,
+        "mortgagePayerName": { "value": "CHASE BANK", "confidence": 1 },
+        "totalItemizedLine17": { "value": 9000, "confidence": 1 },
+        "lines": [
+          { "lineId": "1", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "2", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "3", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "4", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "5a", "amount": { "value": 5000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "5b", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "5c", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "5d", "amount": { "value": 5000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "5e", "amount": { "value": 5000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "6", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "7", "amount": { "value": 5000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "8a", "amount": { "value": 4000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "8b", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "8c", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "8d", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "8e", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "9", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "10", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "11", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "12", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "13", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "14", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "15", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "16", "amount": null, "crossReference": null, "derivedFrom": [] },
+          { "lineId": "17", "amount": { "value": 9000, "confidence": 1 }, "crossReference": null, "derivedFrom": [] }
+        ]
+      },
+      "scheduleB": {
+        "present": true,
+        "pageRange": [8],
+        "interestLineTotal": { "value": 450, "confidence": 1 },
+        "interestPayers": [
+          { "rowNumber": 1, "payerName": { "value": "BANK OF AMERICA", "confidence": 1 }, "amount": { "value": 250, "confidence": 1 } },
+          { "rowNumber": 2, "payerName": { "value": "FIDELITY", "confidence": 1 }, "amount": { "value": 200, "confidence": 1 } }
+        ],
+        "dividendLineTotal": { "value": 150, "confidence": 1 },
+        "dividendPayers": [
+          { "rowNumber": 1, "payerName": { "value": "FIDELITY", "confidence": 1 }, "amount": { "value": 50, "confidence": 1 } },
+          { "rowNumber": 2, "payerName": { "value": "MORGAN STANLEY", "confidence": 1 }, "amount": { "value": 100, "confidence": 1 } }
+        ]
+      },
+      "scheduleD": {
+        "present": true,
+        "pageRange": [9, 10],
+        "shortTermRows": [
+          { "lineId": "1a", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "1b", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "2", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "3", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null }
+        ],
+        "netShortTermLine7": { "value": 5800, "confidence": 1 },
+        "longTermRows": [
+          { "lineId": "8a", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "8b", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "9", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null },
+          { "lineId": "10", "proceeds": null, "cost": null, "adjustments": null, "gainOrLoss": null }
+        ],
+        "netLongTermLine15": null,
+        "summary": {
+          "line16": { "value": 5800, "confidence": 1 },
+          "line17BothGains": { "value": false, "confidence": 1 },
+          "line18": null,
+          "line19": null,
+          "line20BothZeroOrBlank": null,
+          "line21LossEntered": null,
+          "line22QualifiedDividendsPresent": { "value": true, "confidence": 1 },
+          "qualifiedOpportunityFundDisposition": { "value": false, "confidence": 1 }
+        }
+      }
+    }
+  }
+}

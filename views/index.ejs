@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taxpayer Q&amp;A POC</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Taxpayer Q&amp;A (Ollama / gemma3:12b)</h1>
+
+  <form method="POST" action="/ask">
+    <section>
+      <label for="taxpayerId"><strong>Taxpayer</strong></label><br />
+      <select id="taxpayerId" name="taxpayerId">
+        <% taxpayers.forEach(function (t) { %>
+          <option value="<%= t.id %>" <%= t.id === selectedTaxpayerId ? "selected" : "" %>><%= t.label %></option>
+        <% }); %>
+      </select>
+    </section>
+
+    <section>
+      <strong>Questions</strong>
+      <div class="checkbox-list">
+        <% questionnaire.forEach(function (q) { %>
+          <label class="checkbox-item">
+            <input
+              type="checkbox"
+              name="questionIds"
+              value="<%= q.id %>"
+              <%= checkedQuestionIds.includes(q.id) ? "checked" : "" %>
+            />
+            <%= q.text %>
+            <span class="type-tag"><%= q.answerDataType %></span>
+          </label>
+        <% }); %>
+      </div>
+    </section>
+
+    <section>
+      <label for="freeformQuestion"><strong>Free-form question(s)</strong></label><br />
+      <textarea
+        id="freeformQuestion"
+        name="freeformQuestion"
+        rows="4"
+        placeholder="Type one question per line..."
+      ><%= freeformQuestion %></textarea>
+    </section>
+
+    <button type="submit">Ask AI</button>
+  </form>
+
+  <% if (result) { %>
+    <section class="result">
+      <% if (result.error) { %>
+        <p class="error"><%= result.error %></p>
+      <% } else { %>
+        <h2>Answers</h2>
+        <table>
+          <thead>
+            <tr><th>Question</th><th>Answer</th></tr>
+          </thead>
+          <tbody>
+            <% result.rows.forEach(function (row) { %>
+              <tr>
+                <td><%= row.questionText %></td>
+                <td><%- row.html %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } %>
+    </section>
+  <% } %>
+</body>
+</html>
