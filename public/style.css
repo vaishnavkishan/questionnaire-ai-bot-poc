@@ -1,11 +1,14 @@
 :root {
-  --bg: #f7f7f8;
+  --bg: #f5faf9;
   --surface: #ffffff;
-  --border: #e3e3e6;
-  --text: #1a1a1e;
-  --text-muted: #6b6b74;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
+  --border: #dcebe8;
+  --text: #0b2a2b;
+  --text-muted: #5c7876;
+  --accent: #1cdbbc;
+  --accent-hover: #14b39a;
+  --accent-soft: #e3fbf6;
+  --accent-mint: #8cf5e3;
+  --dark: #063637;
   --radius: 10px;
 }
 
@@ -18,29 +21,59 @@ body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 2.5rem 1rem;
   line-height: 1.5;
 }
 
-.page {
-  max-width: 720px;
-  margin: 0 auto;
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
 }
 
-.page-header {
-  margin-bottom: 1.5rem;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
+  color: var(--dark);
 }
 
 .subtitle {
-  margin: 0.25rem 0 0;
+  margin: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .card {
@@ -48,14 +81,9 @@ h1 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .field {
-  margin-bottom: 1.25rem;
-}
-
-.field:last-of-type {
   margin-bottom: 0;
 }
 
@@ -64,6 +92,7 @@ label {
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
+  color: var(--dark);
 }
 
 select,
@@ -82,17 +111,48 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 textarea {
   resize: vertical;
 }
 
+.chat-card .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  color: #ffffff;
+}
+
+.questions-card {
+  position: sticky;
+  top: 1.5rem;
+}
+
 .checkbox-list {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  max-height: 480px;
+  overflow-y: auto;
 }
 
 .checkbox-item {
@@ -100,14 +160,14 @@ textarea {
   align-items: baseline;
   gap: 0.55rem;
   font-weight: 400;
-  font-size: 0.95rem;
-  padding: 0.45rem 0.25rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.4rem;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .checkbox-item:hover {
-  background: var(--bg);
+  background: var(--accent-soft);
 }
 
 .checkbox-item input {
@@ -123,42 +183,18 @@ textarea {
 
 .type-tag {
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 0.05rem 0.4rem;
   white-space: nowrap;
 }
 
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-}
-
-button {
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  background: var(--accent);
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.4rem;
-  cursor: pointer;
-  transition: background 0.15s ease;
-}
-
-button:hover {
-  background: var(--accent-hover);
-}
-
-.result h2 {
+.result-card h2 {
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 1rem;
+  color: var(--dark);
 }
 
 table {
@@ -178,7 +214,7 @@ td {
 th {
   color: var(--text-muted);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
@@ -202,11 +238,20 @@ tr:last-child td {
 }
 
 .badge-yes {
-  background: #dff5e1;
-  color: #1e6b34;
+  background: var(--accent-soft);
+  color: #0e6b58;
 }
 
 .badge-no {
   background: #f5dfe0;
   color: #8a1c24;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .questions-card {
+    position: static;
+  }
 }
