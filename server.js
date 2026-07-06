@@ -9,6 +9,18 @@ const { formatAnswer } = require("./lib/format");
 
 const questionnaire = JSON.parse(fs.readFileSync(path.join(__dirname, "questionnaire.json"), "utf8"));
 
+function groupQuestionsByCategory(questions) {
+  const grouped = {};
+  questions.forEach((q) => {
+    const category = q.category || "Other";
+    if (!grouped[category]) {
+      grouped[category] = [];
+    }
+    grouped[category].push(q);
+  });
+  return grouped;
+}
+
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -16,9 +28,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 function renderIndex(res, { selectedTaxpayerId, checkedQuestionIds, freeformQuestion, result } = {}) {
+  const groupedQuestions = groupQuestionsByCategory(questionnaire);
   res.render("index", {
     taxpayers: config.taxpayers,
     questionnaire,
+    groupedQuestions,
     selectedTaxpayerId: selectedTaxpayerId || config.taxpayers[0].id,
     checkedQuestionIds: checkedQuestionIds || [],
     freeformQuestion: freeformQuestion || "",
@@ -75,7 +89,7 @@ app.post("/ask", async (req, res) => {
   });
 
   try {
-    const { answers } = await askOllamaStructured(userContent, ANSWERS_SCHEMA, config.ollama);
+    const { answers, stats } = await askOllamaStructured(userContent, ANSWERS_SCHEMA, config.ollama);
     const answersById = new Map((answers || []).map((a) => [a.questionId, a.answer]));
 
     const rows = items.map((item) => {
@@ -84,7 +98,7 @@ app.post("/ask", async (req, res) => {
       return { questionText: item.text, dataType: item.answerDataType, html };
     });
 
-    renderIndex(res, { ...viewState, result: { rows } });
+    renderIndex(res, { ...viewState, result: { rows, stats, questionCount: items.length } });
   } catch (err) {
     renderIndex(res, { ...viewState, result: { error: err.message } });
   }

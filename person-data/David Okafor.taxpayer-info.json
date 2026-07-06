@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "taxYear": 2025,
+    "formVersion": "1040 (2024)",
+    "country": "US"
+  },
+  "taxpayer": {
+    "firstName": { "value": "DAVID", "confidence": 1 },
+    "lastName": { "value": "OKAFOR", "confidence": 1 },
+    "ssn": { "value": "555-66-7777", "confidence": 1 },
+    "occupation": { "value": "REGISTERED NURSE", "confidence": 0 },
+    "phone": { "value": "(512) 555-0198", "confidence": 1 },
+    "email": null,
+    "filingStatus": { "value": "Head of Household", "confidence": 1 },
+    "digitalAssetsAnswer": { "value": true, "confidence": 1 },
+    "address": {
+      "streetLine": { "value": "78 ELM STREET", "confidence": 1 },
+      "aptNo": null,
+      "city": { "value": "AUSTIN", "confidence": 1 },
+      "state": { "value": "TX", "confidence": 1 },
+      "zipCode": { "value": "73301", "confidence": 1 }
+    }
+  },
+  "spouse": null,
+  "dependents": [
+    {
+      "firstName": { "value": "AMARA", "confidence": 1 },
+      "lastName": { "value": "OKAFOR", "confidence": 1 },
+      "ssn": { "value": "888-99-0000", "confidence": 1 },
+      "relationship": { "value": "Daughter", "confidence": 1 },
+      "childTaxCreditEligible": { "value": true, "confidence": 1 }
+    }
+  ],
+  "thirdPartyDesignee": null,
+  "preparer": {
+    "name": { "value": "SAMUEL OKONKWO", "confidence": 1 },
+    "ptin": { "value": "P01122334", "confidence": 1 },
+    "firmName": { "value": "LONE STAR TAX SERVICES", "confidence": 1 },
+    "firmEin": { "value": "74-1234567", "confidence": 1 },
+    "firmPhone": { "value": "(512) 555-0177", "confidence": 1 },
+    "firmAddress": {
+      "streetLine": { "value": "900 CONGRESS AVE", "confidence": 1 },
+      "aptNo": null,
+      "city": { "value": "AUSTIN", "confidence": 1 },
+      "state": { "value": "TX", "confidence": 1 },
+      "zipCode": { "value": "78701", "confidence": 1 }
+    }
+  },
+  "refundDirectDeposit": null,
+  "statementReferences": [],
+  "return": {
+    "form1040": {
+      "sections": [
+        {
+          "sectionId": "income",
+          "label": "Income",
+          "pageRange": [1],
+          "lines": [
+            {
+              "lineId": "1a",
+              "label": "Total amount from Form(s) W-2, box 1",
+              "amount": { "value": 68000, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1b",
+              "label": "Household employee wages not reported on Form(s) W-2",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1c",
+              "label": "Tip income not reported on line 1a",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1d",
+              "label": "Medicaid waiver payments not reported on Form(s) W-2",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1e",
+              "label": "Taxable dependent care benefits from Form 2441, line 26",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1f",
+              "label": "Employer-provided adoption benefits from Form 8839, line 29",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1g",
+              "label": "Wages from Form 8919, line 6",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1h",
+              "label": "Other earned income",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1i",
+              "label": "Nontaxable combat pay election",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "1z",
+              "label": "Add lines 1a through 1h",
+              "amount": { "value": 68000, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["1a", "1b", "1c", "1d", "1e", "1f", "1g", "1h"]
+            },
+            {
+              "lineId": "2a",
+              "label": "Tax-exempt interest",
+              "amount": null,
+              "crossReference": "Schedule B",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "2b",
+              "label": "Taxable interest",
+              "amount": { "value": 50, "confidence": 1 },
+              "crossReference": "Schedule B",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "3a",
+              "label": "Qualified dividends",
+              "amount": null,
+              "crossReference": "Schedule B",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "3b",
+              "label": "Ordinary dividends",
+              "amount": null,
+              "crossReference": "Schedule B",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "4a",
+              "label": "IRA distributions",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "4b",
+              "label": "Taxable amount (IRA distributions)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "5a",
+              "label": "Pensions and annuities",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "5b",
+              "label": "Taxable amount (pensions and annuities)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "6a",
+              "label": "Social security benefits",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "6b",
+              "label": "Taxable amount (social security benefits)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "6c",
+              "label": "Lump-sum election method (if checked)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "7",
+              "label": "Capital gain or (loss)",
+              "amount": null,
+              "crossReference": "Schedule D",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "8",
+              "label": "Additional income from Schedule 1, line 10",
+              "amount": null,
+              "crossReference": "Schedule 1",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "9",
+              "label": "Add lines 1z, 2b, 3b, 4b, 5b, 6b, 7, and 8 — total income",
+              "amount": { "value": 68050, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["1z", "2b", "3b", "4b", "5b", "6b", "7", "8"]
+            }
+          ]
+        },
+        {
+          "sectionId": "adjusted-gross-income",
+          "label": "Adjusted Gross Income / Deduction",
+          "pageRange": [1],
+          "lines": [
+            {
+              "lineId": "10",
+              "label": "Adjustments to income from Schedule 1, line 26",
+              "amount": null,
+              "crossReference": "Schedule 1",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "11",
+              "label": "Adjusted gross income (line 9 minus line 10)",
+              "amount": { "value": 68050, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["9", "10"]
+            },
+            {
+              "lineId": "12",
+              "label": "Standard deduction or itemized deductions (from Schedule A)",
+              "amount": { "value": 21900, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "13",
+              "label": "Qualified business income deduction from Form 8995/8995-A",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "14",
+              "label": "Add lines 12 and 13",
+              "amount": { "value": 21900, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["12", "13"]
+            },
+            {
+              "lineId": "15",
+              "label": "Taxable income (line 11 minus line 14)",
+              "amount": { "value": 46150, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["11", "14"]
+            }
+          ]
+        },
+        {
+          "sectionId": "tax-and-credits",
+          "label": "Tax and Credits",
+          "pageRange": [2],
+          "lines": [
+            {
+              "lineId": "16",
+              "label": "Tax",
+              "amount": { "value": 5207, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "17",
+              "label": "Amount from Schedule 2, line 3",
+              "amount": null,
+              "crossReference": "Schedule 2",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "18",
+              "label": "Add lines 16 and 17",
+              "amount": { "value": 5207, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["16", "17"]
+            },
+            {
+              "lineId": "19",
+              "label": "Child tax credit / credit for other dependents",
+              "amount": { "value": 2000, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "20",
+              "label": "Amount from Schedule 3, line 8",
+              "amount": null,
+              "crossReference": "Schedule 3",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "21",
+              "label": "Subtract line 20 from line 19. If zero or less, enter -0-",
+              "amount": { "value": 2000, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["19", "20"]
+            },
+            {
+              "lineId": "22",
+              "label": "Subtract line 21 from line 18. If zero or less, enter -0-",
+              "amount": { "value": 3207, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["18", "21"]
+            }
+          ]
+        },
+        {
+          "sectionId": "other-taxes",
+          "label": "Other Taxes",
+          "pageRange": [2],
+          "lines": [
+            {
+              "lineId": "23",
+              "label": "Other taxes from Schedule 2, line 21",
+              "amount": null,
+              "crossReference": "Schedule 2",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "24",
+              "label": "Add lines 22 and 23 — total tax",
+              "amount": { "value": 3207, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["22", "23"]
+            }
+          ]
+        },
+        {
+          "sectionId": "payments",
+          "label": "Payments",
+          "pageRange": [2],
+          "lines": [
+            {
+              "lineId": "25a",
+              "label": "Federal income tax withheld from Form(s) W-2",
+              "amount": { "value": 2200, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "25b",
+              "label": "Federal income tax withheld from Form(s) 1099",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "25c",
+              "label": "Federal income tax withheld from other forms",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "25d",
+              "label": "Add lines 25a through 25c",
+              "amount": { "value": 2200, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["25a", "25b", "25c"]
+            },
+            {
+              "lineId": "26",
+              "label": "2024 estimated tax payments and amount applied from 2023 return",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "27",
+              "label": "Earned income credit (EIC)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "28",
+              "label": "Additional child tax credit from Schedule 8812",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "29",
+              "label": "American opportunity credit from Form 8863, line 8",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "31",
+              "label": "Amount from Schedule 3, line 15",
+              "amount": null,
+              "crossReference": "Schedule 3",
+              "derivedFrom": []
+            },
+            {
+              "lineId": "32",
+              "label": "Add lines 27, 28, 29, and 31 — total other payments / refundable credits",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": ["27", "28", "29", "31"]
+            },
+            {
+              "lineId": "33",
+              "label": "Add lines 25d, 26, and 32 — total payments",
+              "amount": { "value": 2200, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["25d", "26", "32"]
+            }
+          ]
+        },
+        {
+          "sectionId": "refund",
+          "label": "Refund",
+          "pageRange": [2],
+          "lines": [
+            {
+              "lineId": "34",
+              "label": "Overpayment (line 33 minus line 24)",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": ["33", "24"]
+            },
+            {
+              "lineId": "35a",
+              "label": "Amount of line 34 you want refunded to you",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            },
+            {
+              "lineId": "36",
+              "label": "Amount of line 34 you want applied to 2025 estimated tax",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            }
+          ]
+        },
+        {
+          "sectionId": "amount-you-owe",
+          "label": "Amount You Owe",
+          "pageRange": [2],
+          "lines": [
+            {
+              "lineId": "37",
+              "label": "Amount you owe (line 24 minus line 33)",
+              "amount": { "value": 1007, "confidence": 1 },
+              "crossReference": null,
+              "derivedFrom": ["24", "33"]
+            },
+            {
+              "lineId": "38",
+              "label": "Estimated tax penalty",
+              "amount": null,
+              "crossReference": null,
+              "derivedFrom": []
+            }
+          ]
+        }
+      ]
+    },
+    "schedules": {
+      "schedule1": { "present": false, "pageRange": [] },
+      "schedule2": { "present": false, "pageRange": [] },
+      "schedule3": { "present": false, "pageRange": [] },
+      "scheduleA": { "present": false, "pageRange": [] },
+      "scheduleB": { "present": false, "pageRange": [] },
+      "scheduleD": { "present": false, "pageRange": [] }
+    }
+  }
+}

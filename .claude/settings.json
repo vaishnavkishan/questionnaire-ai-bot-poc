@@ -3,7 +3,27 @@
     "allow": [
       "Bash(curl -s http://localhost:3000/style.css)",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(grep -E \"\\\\.\\(js|ejs|json\\)$\")"
+      "Bash(grep -E \"\\\\.\\(js|ejs|json\\)$\")",
+      "Bash(npm start *)",
+      "Bash(pkill -f \"npm start\")",
+      "Bash(open http://localhost:3000)",
+      "Bash(curl -s -X POST http://localhost:3000/ask -d taxpayerId=maria-chen -d questionIds=first-name -d questionIds=last-name -d freeformQuestion=)",
+      "Bash(curl -s -X POST http://localhost:3000/ask -d taxpayerId=ben-1040 -d questionIds=first-name -d questionIds=last-name -d freeformQuestion=)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(pkill -f \"node.*server.js\")",
+      "Bash(xargs -r kill)",
+      "Bash(PORT=3000 node server.js)",
+      "Bash(curl -s -o /tmp/index.html -w \"%{http_code}\\\\n\" http://localhost:3000/)",
+      "Read(//private/tmp/**)",
+      "Bash(open http://localhost:3000/)",
+      "Bash(curl -s -o /tmp/ask.html -w \"%{http_code}\\\\n\" -X POST http://localhost:3000/ask -d \"taxpayerId=ben-1040\" -d \"questionIds=filing-status\" -d \"questionIds=has-dependents\" -d \"questionIds=total-tax\" -d \"freeformQuestion=\")",
+      "Bash(grep -A2 \"alert alert-danger\\\\|<table\" /tmp/ask.html | head -20)",
+      "Bash(grep -A1 \"<td>\" /tmp/ask.html)",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to activate')",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(node -c server.js)",
+      "Bash(node -c lib/ollama.js)"
     ]
   }
 }
